@@ -2,7 +2,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Dancing Script', cursive; /* Fuente romántica */
     height: 100%;
     overflow: hidden;
 }
@@ -40,11 +40,11 @@ body, html {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 4rem; /* Aumentar el tamaño */
 }
 
 p {
-    font-size: 1.5rem;
+    font-size: 2rem; /* Aumentar el tamaño */
 }
 
 /* Estilo del botón "Siguiente" con forma de corazón y apariencia de botón */
@@ -97,7 +97,6 @@ p {
     transform: rotate(-45deg) scale(0.95); /* Levemente más pequeño al hacer clic */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra más pequeña al hacer clic */
 }
-
 
 /* Corazones cayendo */
 .hearts {
