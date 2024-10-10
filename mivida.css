@@ -1,13 +1,13 @@
-/* Reset básico de estilos */
+
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Dancing Script', cursive; /* Fuente romántica */
+    font-family: 'Dancing Script', cursive; 
     height: 100%;
     overflow: hidden;
 }
 
-/* Estilo del slider */
+
 .slider {
     position: relative;
     width: 100%;
@@ -40,14 +40,14 @@ body, html {
 }
 
 h1 {
-    font-size: 4rem; /* Aumentar el tamaño */
+    font-size: 4rem;
 }
 
 p {
-    font-size: 2rem; /* Aumentar el tamaño */
+    font-size: 2rem;
 }
 
-/* Estilo del botón "Siguiente" con forma de corazón y apariencia de botón */
+
 .next-btn {
     position: absolute;
     bottom: 50px;
@@ -57,7 +57,7 @@ p {
     border: none;
     cursor: pointer;
     transform: rotate(-45deg);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Añadir sombra para darle profundidad */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
     transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease;
 }
 
@@ -81,10 +81,10 @@ p {
     top: 0;
 }
 
-/* Efecto hover para resaltar el botón */
+
 .next-btn:hover {
     background-color: #e91e63;
-    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.4); /* Más sombra al pasar el ratón */
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.4); 
 }
 
 .next-btn:hover::before,
@@ -92,13 +92,13 @@ p {
     background-color: #e91e63;
 }
 
-/* Efecto "presionado" cuando se hace clic */
+
 .next-btn:active {
-    transform: rotate(-45deg) scale(0.95); /* Levemente más pequeño al hacer clic */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra más pequeña al hacer clic */
+    transform: rotate(-45deg) scale(0.95); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Corazones cayendo */
+
 .hearts {
     position: fixed;
     top: 0;
