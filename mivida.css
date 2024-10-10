@@ -1,0 +1,149 @@
+/* Reset básico de estilos */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Estilo del slider */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff99cc;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.content {
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+/* Estilo del botón "Siguiente" con forma de corazón y apariencia de botón */
+.next-btn {
+    position: absolute;
+    bottom: 50px;
+    width: 60px;
+    height: 60px;
+    background-color: #ff4081;
+    border: none;
+    cursor: pointer;
+    transform: rotate(-45deg);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Añadir sombra para darle profundidad */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease;
+}
+
+.next-btn::before,
+.next-btn::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background-color: #ff4081;
+    border-radius: 50%;
+}
+
+.next-btn::before {
+    top: -30px;
+    left: 0;
+}
+
+.next-btn::after {
+    left: 30px;
+    top: 0;
+}
+
+/* Efecto hover para resaltar el botón */
+.next-btn:hover {
+    background-color: #e91e63;
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.4); /* Más sombra al pasar el ratón */
+}
+
+.next-btn:hover::before,
+.next-btn:hover::after {
+    background-color: #e91e63;
+}
+
+/* Efecto "presionado" cuando se hace clic */
+.next-btn:active {
+    transform: rotate(-45deg) scale(0.95); /* Levemente más pequeño al hacer clic */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra más pequeña al hacer clic */
+}
+
+
+/* Corazones cayendo */
+.hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.heart {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    transform: rotate(-45deg);
+    animation: fall 5s infinite;
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -7.5px;
+    left: 0;
+}
+
+.heart::after {
+    left: 7.5px;
+    top: 0;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) rotate(-45deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(-45deg);
+    }
+}
